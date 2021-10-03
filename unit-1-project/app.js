@@ -160,7 +160,7 @@ $(() => {
                                   }
                                 ).then(
                                   (people8) => {
-                                    $('.characters').append($('<li>').text(`Count ${people8.results[6].name}`))
+                                    $('.characters').append($('<li>').text(`${people8.results[6].name}`))
                                   }
                                 )
                               }
@@ -228,7 +228,7 @@ $(() => {
           (people) => {
             modalInfo.append($('<p>').text('Notable characters:'))
             modalInfo.append($('<ul>').addClass('characters'))
-            $('.characters').append($('<li>').text(`${people.results[1].name}`)) //c3p0
+            $('.characters').append($('<li>').text(`c-3PO`)) //c3p0
             $('.characters').append($('<li>').text(`${people.results[2].name}`)) //r2d2
             $('.characters').append($('<li>').text(`${people.results[9].name}`)) //obi1
           })
@@ -241,22 +241,30 @@ $(() => {
               $('.characters').append($('<li>').text(`${people2.results[0].name}`)) //anakin
               $('.characters').append($('<li>').text(`${people2.results[8].name}`)) //yoda
               $('.characters').append($('<li>').text(`Emperor ${people2.results[9].name}`)) //palps
-              $.ajax(
-                {
-                  url: 'https://swapi.dev/api/people/?page=2'
-                }
-              ).then(
-                (people3) => {
-                  $('.characters').append($('<li>').text(`${people2.results[0].name} / Darth Vader`)) //anakin
-                  $('.characters').append($('<li>').text(`${people2.results[8].name}`)) //yoda
-                  $('.characters').append($('<li>').text(`${people2.results[9].name}`)) //palps
-                },
-                console.log('bad request 3')
-              )
+              $('.characters').append($('<li>').text(`Padmé Amidala`))
+              $('.characters').append($('<li>').text(`Jar Jar Binks`))
+              $('.characters').append($('<li>').text(`Ayla Secura`))
+              $('.characters').append($('<li>').text(`Mace Windu`))
+              $('.characters').append($('<li>').text(`Ki-Adi-Mundi`))
+              $('.characters').append($('<li>').text(`Kit Fisto`))
+              $('.characters').append($('<li>').text(`Plo Koon`))
+              $('.characters').append($('<li>').text(`Count Dooku`))
+              $('.characters').append($('<li>').text(`Shaak Ti`))
+              $('.characters').append($('<li>').text(`Sassee Tiin`))
+              $('.characters').append($('<li>').text(`General Grievous`))
+              $('.characters').append($('<li>').text(`Tarfful`))
             },
             console.log('bad request 2')
           )
-
+          modalInfo.append($('<p>').text('Planets:'))
+          modalInfo.append($('<ul>').addClass('planets'))
+          $('.planets').append($('<li>').text('Tattoine'))
+          $('.planets').append($('<li>').text('Coruscant'))
+          $('.planets').append($('<li>').text('Utapau'))
+          $('.planets').append($('<li>').text('Mustafar'))
+          $('.planets').append($('<li>').text('Kashyyyk'))
+          $('.planets').append($('<li>').text('Mygeeto'))
+          $('.planets').append($('<li>').text('Felucia'))
       })
 
 
