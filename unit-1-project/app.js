@@ -319,7 +319,8 @@ $(() => {
           }
         ).then(
           (film) => {
-            modalInfo.append($('<p>').text(`Title: ${films.results[0].title}`))
+            modalInfo.append($('<p>').text(`Title: ${films.results[1].title}`))
+
             //episode 5 planets
             modalInfo.append($('<p>').text('Planets:'))
             modalInfo.append($('<ul>').addClass('planets'))
@@ -347,6 +348,58 @@ $(() => {
             $('.characters').append($('<li>').text(`IG-88`))
             $('.characters').append($('<li>').text(`Bossk`))
             $('.characters').append($('<li>').text(`Lando Calrissian`))
+          },
+          () => {
+            console.log('bad request 2');
+          }
+        )
+      })
+
+
+      //episode 6 info
+      $('#button-6').on('click', () => {
+        openModal()
+        $.ajax(
+          {
+            url: 'https://swapi.dev/api/films'
+          }
+        ).then(
+          (film) => {
+            modalInfo.append($('<p>').text(`Title: ${films.results[2].title}`))
+
+            //episode 6 planets
+            modalInfo.append($('<p>').text('Planets:'))
+            modalInfo.append($('<ul>').addClass('planets'))
+            $('.planets').append($('<li>').text('Tattoine'))
+            $('.planets').append($('<li>').text('Dagobah'))
+            $('.planets').append($('<li>').text('Endor'))
+            $('.planets').append($('<li>').text('Naboo'))
+            $('.planets').append($('<li>').text('Coruscant'))
+
+            //episode 6 characters
+            modalInfo.append($('<p>').text('Notable characters:'))
+            modalInfo.append($('<ul>').addClass('characters'))
+            $('.characters').append($('<li>').text(`C-3PO`))
+            $('.characters').append($('<li>').text(`R2-D2`))
+            $('.characters').append($('<li>').text(`Luke Skywalker`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Han Solo`))
+            $('.characters').append($('<li>').text(`Chewbacca`))
+            $('.characters').append($('<li>').text(`Leia Organa`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Darth Vader`))
+            $('.characters').append($('<li>').text(`Wilhuff Tarkin`))
+            $('.characters').append($('<li>').text(`Wedge Antilles`))
+            $('.characters').append($('<li>').text(`Yoda`))
+            $('.characters').append($('<li>').text(`Emperor Palpatine`))
+            $('.characters').append($('<li>').text(`Boba Fett`))
+            $('.characters').append($('<li>').text(`Lando Calrissian`))
+            $('.characters').append($('<li>').text(`Adimral Ackbar`))
+            $('.characters').append($('<li>').text(`Mon Mothma`))
+            $('.characters').append($('<li>').text(`Lando Calrissian`))
+            $('.characters').append($('<li>').text(`Wicket Systri Warrick`))
+            $('.characters').append($('<li>').text(`Bib Fortuna`))
+
           },
           () => {
             console.log('bad request 2');
