@@ -228,7 +228,7 @@ $(() => {
           (people) => {
             modalInfo.append($('<p>').text('Notable characters:'))
             modalInfo.append($('<ul>').addClass('characters'))
-            $('.characters').append($('<li>').text(`c-3PO`)) //c3p0
+            $('.characters').append($('<li>').text(`C-3PO`)) //c3p0
             $('.characters').append($('<li>').text(`${people.results[2].name}`)) //r2d2
             $('.characters').append($('<li>').text(`${people.results[9].name}`)) //obi1
           })
@@ -256,6 +256,8 @@ $(() => {
             },
             console.log('bad request 2')
           )
+
+          //episode 3 planets
           modalInfo.append($('<p>').text('Planets:'))
           modalInfo.append($('<ul>').addClass('planets'))
           $('.planets').append($('<li>').text('Tattoine'))
@@ -268,7 +270,68 @@ $(() => {
       })
 
 
-      console.log(films.results[5]);
+      //episode 4 info
+      $('#button-4').on('click', () => {
+        openModal()
+        $.ajax(
+          {
+            url: 'https://swapi.dev/api/films'
+          }
+        ).then(
+          (film) => {
+            modalInfo.append($('<p>').text(`Title: ${films.results[0].title}`))
+            //episode 4 planets
+            modalInfo.append($('<p>').text('Planets:'))
+            modalInfo.append($('<ul>').addClass('planets'))
+            $('.planets').append($('<li>').text('Tattoine'))
+            $('.planets').append($('<li>').text('Yavin IV'))
+            $('.planets').append($('<li>').text('Alderaan'))
+
+            //episode 4 characters
+            modalInfo.append($('<p>').text('Notable characters:'))
+            modalInfo.append($('<ul>').addClass('characters'))
+            $('.characters').append($('<li>').text(`C-3PO`))
+            $('.characters').append($('<li>').text(`R2-D2`))
+            $('.characters').append($('<li>').text(`Luke Skywalker`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Han Solo`))
+            $('.characters').append($('<li>').text(`Chewbacca`))
+            $('.characters').append($('<li>').text(`Leia Organa`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Darth Vader`))
+            $('.characters').append($('<li>').text(`Wilhuff Tarkin`))
+            $('.characters').append($('<li>').text(`Jabba Desilijic Tiure`))
+            $('.characters').append($('<li>').text(`Wedge Antilles`))
+            modalInfo.append($('<p>').text('Planets:'))
+            modalInfo.append($('<ul>').addClass('planets'))
+          },
+          () => {
+            console.log('bad request 2');
+          }
+        )
+      })
+
+
+      //episode 5 info
+      $('#button-5').on('click', () => {
+        openModal()
+        $.ajax(
+          {
+            url: 'https://swapi.dev/api/films'
+          }
+        ).then(
+          (film) => {
+            modalInfo.append($('<p>').text(`Title: ${films.results[0].title}`))
+            //episode 5 planets
+            modalInfo.append($('<p>').text('Planets:'))
+            modalInfo.append($('<ul>').addClass('planets'))
+          },
+          () => {
+            console.log('bad request 2');
+          }
+        )
+      })
+      console.log(films.results[0]);
 
 
     },
