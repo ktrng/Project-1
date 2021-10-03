@@ -302,8 +302,6 @@ $(() => {
             $('.characters').append($('<li>').text(`Wilhuff Tarkin`))
             $('.characters').append($('<li>').text(`Jabba Desilijic Tiure`))
             $('.characters').append($('<li>').text(`Wedge Antilles`))
-            modalInfo.append($('<p>').text('Planets:'))
-            modalInfo.append($('<ul>').addClass('planets'))
           },
           () => {
             console.log('bad request 2');
@@ -325,6 +323,30 @@ $(() => {
             //episode 5 planets
             modalInfo.append($('<p>').text('Planets:'))
             modalInfo.append($('<ul>').addClass('planets'))
+            $('.planets').append($('<li>').text('Hoth'))
+            $('.planets').append($('<li>').text('Dagobah'))
+            $('.planets').append($('<li>').text('Bespin'))
+
+            //episode 5 characters
+            modalInfo.append($('<p>').text('Notable characters:'))
+            modalInfo.append($('<ul>').addClass('characters'))
+            $('.characters').append($('<li>').text(`C-3PO`))
+            $('.characters').append($('<li>').text(`R2-D2`))
+            $('.characters').append($('<li>').text(`Luke Skywalker`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Han Solo`))
+            $('.characters').append($('<li>').text(`Chewbacca`))
+            $('.characters').append($('<li>').text(`Leia Organa`))
+            $('.characters').append($('<li>').text(`Ben Kenobi`))
+            $('.characters').append($('<li>').text(`Darth Vader`))
+            $('.characters').append($('<li>').text(`Wilhuff Tarkin`))
+            $('.characters').append($('<li>').text(`Wedge Antilles`))
+            $('.characters').append($('<li>').text(`Yoda`))
+            $('.characters').append($('<li>').text(`Emperor Palpatine`))
+            $('.characters').append($('<li>').text(`Boba Fett`))
+            $('.characters').append($('<li>').text(`IG-88`))
+            $('.characters').append($('<li>').text(`Bossk`))
+            $('.characters').append($('<li>').text(`Lando Calrissian`))
           },
           () => {
             console.log('bad request 2');
