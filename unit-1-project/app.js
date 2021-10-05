@@ -382,7 +382,6 @@ $(() => {
             $('.characters').append($('<li>').text(`C-3PO`))
             $('.characters').append($('<li>').text(`R2-D2`))
             $('.characters').append($('<li>').text(`Luke Skywalker`))
-            $('.characters').append($('<li>').text(`Ben Kenobi`))
             $('.characters').append($('<li>').text(`Han Solo`))
             $('.characters').append($('<li>').text(`Chewbacca`))
             $('.characters').append($('<li>').text(`Leia Organa`))
