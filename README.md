@@ -3,7 +3,7 @@ Beaker project 1
 
 Technoligies used: HTML, CSS, Javascript, AJAX, jQuery
 
-Live link: https://eager-nightingale-8bda5f.netlify.app/
+Live link: https://hardcore-colden-184fb7.netlify.app/
 
 API used: https://swapi.dev/
 
