@@ -1,4 +1,12 @@
 $(() => {
+  const modal = $('<div>').addClass('modal')
+  const modalText = $('<div>').addClass('modal-textbox')
+  const closeButton = $('<div>').append($('<button>').attr('id', 'close-button').text('x'))
+  const infoContainer = $('<div>').addClass('info')
+
+  modal.append(modalText)
+  modalText.append(closeButton).append(infoContainer)
+  $('body').prepend(modal)
   const modalInfo = $('.info')
 
 
@@ -8,6 +16,7 @@ $(() => {
     }
   ) .then(
     (films) => {
+
       const openModal = () => {
         modalInfo.empty()
         $('.modal').css('display', 'block')
@@ -234,31 +243,23 @@ $(() => {
             $('.characters').append($('<li>').text(`C-3PO`)) //c3p0
             $('.characters').append($('<li>').text(`${people.results[2].name}`)) //r2d2
             $('.characters').append($('<li>').text(`${people.results[9].name}`)) //obi1
+            $('.characters').append($('<li>').text(`Anakin Skywalker`)) //anakin
+            $('.characters').append($('<li>').text(`Yoda`)) //yoda
+            $('.characters').append($('<li>').text(`Emperor Palpatine`)) //palps
+            $('.characters').append($('<li>').text(`Padmé Amidala`))
+            $('.characters').append($('<li>').text(`Jar Jar Binks`))
+            $('.characters').append($('<li>').text(`Ayla Secura`))
+            $('.characters').append($('<li>').text(`Mace Windu`))
+            $('.characters').append($('<li>').text(`Ki-Adi-Mundi`))
+            $('.characters').append($('<li>').text(`Kit Fisto`))
+            $('.characters').append($('<li>').text(`Plo Koon`))
+            $('.characters').append($('<li>').text(`Count Dooku`))
+            $('.characters').append($('<li>').text(`Shaak Ti`))
+            $('.characters').append($('<li>').text(`Sassee Tiin`))
+            $('.characters').append($('<li>').text(`General Grievous`))
+            $('.characters').append($('<li>').text(`Tarfful`))
           })
-          $.ajax(
-            {
-              url: 'https://swapi.dev/api/people/?page=2'
-            }
-          ).then(
-            (people2) => {
-              $('.characters').append($('<li>').text(`${people2.results[0].name}`)) //anakin
-              $('.characters').append($('<li>').text(`${people2.results[8].name}`)) //yoda
-              $('.characters').append($('<li>').text(`Emperor ${people2.results[9].name}`)) //palps
-              $('.characters').append($('<li>').text(`Padmé Amidala`))
-              $('.characters').append($('<li>').text(`Jar Jar Binks`))
-              $('.characters').append($('<li>').text(`Ayla Secura`))
-              $('.characters').append($('<li>').text(`Mace Windu`))
-              $('.characters').append($('<li>').text(`Ki-Adi-Mundi`))
-              $('.characters').append($('<li>').text(`Kit Fisto`))
-              $('.characters').append($('<li>').text(`Plo Koon`))
-              $('.characters').append($('<li>').text(`Count Dooku`))
-              $('.characters').append($('<li>').text(`Shaak Ti`))
-              $('.characters').append($('<li>').text(`Sassee Tiin`))
-              $('.characters').append($('<li>').text(`General Grievous`))
-              $('.characters').append($('<li>').text(`Tarfful`))
-            },
-            console.log('bad request 2')
-          )
+          
 
           //episode 3 planets
           modalInfo.append($('<p>').text('Planets:'))
