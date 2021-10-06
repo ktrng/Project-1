@@ -21,7 +21,8 @@ $(() => {
       //episode 1 info
       $('#button-1').on('click', () => {
         openModal()
-        modalInfo.append($('<p>').text(`Title: ${films.results[3].title}`))
+        modalInfo.append($('<p>').text(`Star Wars Episode I: ${films.results[3].title}`))
+        modalInfo.append($('<p>').text(`Release date: ${films.results[3].release_date}`))
 
         //episode 1 characters
         $.ajax(
@@ -97,7 +98,8 @@ $(() => {
       //episode 2 info
       $('#button-2').on('click', () => {
         openModal()
-        modalInfo.append($('<p>').text(`Title: ${films.results[4].title}`))
+        modalInfo.append($('<p>').text(`Star Wars Episode II: ${films.results[4].title}`))
+        modalInfo.append($('<p>').text(`Release date: ${films.results[4].release_date}`))
 
         //episode 2 characters
         $.ajax(
@@ -217,7 +219,8 @@ $(() => {
       //episode 3 info
       $('#button-3').on('click', () => {
         openModal()
-        modalInfo.append($('<p>').text(`Title: ${films.results[5].title}`))
+        modalInfo.append($('<p>').text(`Star Wars Episode III: ${films.results[5].title}`))
+        modalInfo.append($('<p>').text(`Release date: ${films.results[5].release_date}`))
 
         //episode 3 characters
         $.ajax(
@@ -279,7 +282,10 @@ $(() => {
           }
         ).then(
           (film) => {
-            modalInfo.append($('<p>').text(`Title: ${films.results[0].title}`))
+            modalInfo.append($('<p>').text(`Star Wars Episode IV: ${films.results[0].title}`))
+            modalInfo.append($('<p>').text(`Release date: ${films.results[0].release_date}`))
+
+
             //episode 4 planets
             modalInfo.append($('<p>').text('Planets:'))
             modalInfo.append($('<ul>').addClass('planets'))
@@ -319,7 +325,8 @@ $(() => {
           }
         ).then(
           (film) => {
-            modalInfo.append($('<p>').text(`Title: ${films.results[1].title}`))
+            modalInfo.append($('<p>').text(`Star Wars Episode V: ${films.results[1].title}`))
+            modalInfo.append($('<p>').text(`Release date: ${films.results[1].release_date}`))
 
             //episode 5 planets
             modalInfo.append($('<p>').text('Planets:'))
@@ -365,7 +372,8 @@ $(() => {
           }
         ).then(
           (film) => {
-            modalInfo.append($('<p>').text(`Title: ${films.results[2].title}`))
+            modalInfo.append($('<p>').text(`Star Wars Episode VI: ${films.results[2].title}`))
+            modalInfo.append($('<p>').text(`Release date: ${films.results[2].release_date}`))
 
             //episode 6 planets
             modalInfo.append($('<p>').text('Planets:'))
@@ -405,6 +413,9 @@ $(() => {
           }
         )
       })
+
+
+
       console.log(films.results[0]);
 
 

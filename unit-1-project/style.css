@@ -2,25 +2,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: black;
+  background-image: url(https://cdn.theatlantic.com/thumbor/09LrTESh245UCgZaAPe0S870pss=/0x141:2781x1705/1952x1098/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg);
+  font-size: 1em;
+  font-family: 'Roboto Mono'
 }
 
 h1 {
   color: gold;
 }
-
-nav {
-  position: absolute;
-  top: 0;
-  float: left;
-}
-
-#quiz {
-  color: white;
-  font-size: 2em;
-  position: sticky;
-}
-
 
 
 .bigdiv {
@@ -31,11 +20,11 @@ nav {
 
 .poster {
   width: 100%;
-  height: 600px;
+  height: 550px;
 }
 
 .button-container {
-  width: 40%;
+  width: 35%;
   height: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -60,7 +49,8 @@ button {
 }
 
 .modal-textbox {
-	background-color: white;
+	background-color: black;
+  color: turquoise;
 	height: 450px;
 	width: 550px;
 	border-radius: 2px;
@@ -68,9 +58,24 @@ button {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+#close-button {
+  color: teal;
+}
+
 .info {
   width: 550px;
   height: 400px;
   overflow: auto;
   padding: 10px;
+}
+
+
+@media (max-width: 750px) {
+  .button-container {
+    width: 35%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
 }
